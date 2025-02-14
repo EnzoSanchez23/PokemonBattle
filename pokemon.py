@@ -54,7 +54,13 @@ playerNumber = int(input("Escolha seu Pokemon: "))
 
 #Variaveis com valor da Lista e valor aleatorio
 playerPick = pokemon[playerNumber-1]
-botPick = pokemon[random.randrange(0, len(pokemon))]
+
+randPick = pokemon[random.randrange(0, len(pokemon))]
+if randPick == playerPick:
+    NewRandPick = pokemon[random.randrange(0, len(pokemon))]
+    botPick = NewRandPick
+else:
+    botPick = randPick
 
 
 print("\nSeu Pokemon:", playerPick.get("Nome"))
